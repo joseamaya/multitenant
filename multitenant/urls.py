@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from rest_framework.documentation import include_docs_urls
+from rest_framework_jwt.views import obtain_jwt_token
+
+URL_API_BASE_V1 = r'^api/v1/'
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^auth-token/', obtain_jwt_token, name='auth-token'),
+    url(URL_API_BASE_V1+'docs/', include_docs_urls(title='API Documentation',
+                                                   authentication_classes=[],
+                                                   permission_classes=[])),
 ]
