@@ -4,7 +4,7 @@ coreapi==2.3.3
 coreschema==0.0.4
 Django==1.11.25
 django-tenant-schemas==1.10.0
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 idna==2.9
 itypes==1.2.0
